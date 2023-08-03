@@ -45,6 +45,12 @@ namespace Calculadora
                 _OperandTxt = _OperandTxt + value;
                 txtResult.Text = _OperandTxt;
             }
+            // Si el valor es operador
+            else if(value == "+" || value == "-" || value == "*"
+                || value == "/")
+            {
+
+            }
         }
 
         private void btnText_Click(object sender, EventArgs e)
@@ -52,6 +58,26 @@ namespace Calculadora
             Button btn = (Button)sender;
             string btnText = btn.Text;
             SetOperandTxt(btnText);
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Delete();
+        }
+
+        private void Delete()
+        {
+            if(_OperandTxt.Length > 1)
+                _OperandTxt = _OperandTxt.Substring(0, _OperandTxt.Length - 1);
+            else
+                _OperandTxt = "0";
+
+            txtResult.Text = _OperandTxt;
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            Reset();
         }
     }
 }

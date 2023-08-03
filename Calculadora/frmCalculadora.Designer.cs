@@ -80,6 +80,7 @@
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "+";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnText_Click);
             // 
             // btnDec
             // 
@@ -108,6 +109,7 @@
             this.btnSubstract.TabIndex = 5;
             this.btnSubstract.Text = "-";
             this.btnSubstract.UseVisualStyleBackColor = true;
+            this.btnSubstract.Click += new System.EventHandler(this.btnText_Click);
             // 
             // btnNumber3
             // 
@@ -147,6 +149,7 @@
             this.btnMultiply.TabIndex = 9;
             this.btnMultiply.Text = "*";
             this.btnMultiply.UseVisualStyleBackColor = true;
+            this.btnMultiply.Click += new System.EventHandler(this.btnText_Click);
             // 
             // btnNumber6
             // 
@@ -186,6 +189,7 @@
             this.btnDivide.TabIndex = 13;
             this.btnDivide.Text = "/";
             this.btnDivide.UseVisualStyleBackColor = true;
+            this.btnDivide.Click += new System.EventHandler(this.btnText_Click);
             // 
             // btnNumber9
             // 
@@ -225,6 +229,7 @@
             this.btnReset.TabIndex = 17;
             this.btnReset.Text = "C";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnDelete
             // 
@@ -234,6 +239,7 @@
             this.btnDelete.TabIndex = 18;
             this.btnDelete.Text = "<-";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // frmCalculadora
             // 
