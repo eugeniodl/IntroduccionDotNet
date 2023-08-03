@@ -1,8 +1,11 @@
-﻿// Primer programa
-string bienvenida = "Bienvenidos al curso de Programación I";
+﻿// Prueba de aplicación de consola
 
-Console.BackgroundColor = ConsoleColor.Red;
+string bienvenida = "Bienvenido al curso de Programación I";
+
+Console.BackgroundColor = ConsoleColor.Green;
+
 Console.WriteLine(bienvenida);
-Console.ReadLine();
-Console.BackgroundColor = ConsoleColor.Black;
 
+Console.ReadLine();
+
+Console.BackgroundColor = ConsoleColor.Black;

@@ -1,4 +1,4 @@
-namespace Calculadora
+namespace pjCalculadora
 {
     internal static class Program
     {
