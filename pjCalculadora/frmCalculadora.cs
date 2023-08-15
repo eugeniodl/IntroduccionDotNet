@@ -77,6 +77,16 @@ namespace pjCalculadora
                 if (_Operator != "" && _OperandTxt != "")
                     DoOperation();
             }
+            // Si el valor es delete
+            else if(value == "\b")
+            {
+                Delete();
+            }
+            // Si el valor es reset ESC
+            else if(value == "\u001b")
+            {
+                Reset();
+            }
             // Si el valor es punto
             else if(value == ",")
             {
@@ -117,6 +127,11 @@ namespace pjCalculadora
                 _OperandTxt = "0";
 
             txtResult.Text = _OperandTxt;
+        }
+
+        private void frmCalculadora_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SetOperandTxt(e.KeyChar.ToString());
         }
     }
 }
