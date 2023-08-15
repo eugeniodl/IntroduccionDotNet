@@ -38,19 +38,69 @@ namespace Calculadora
         private void SetOperandTxt(string value)
         {
             // Si el valor es numérico
-            if(value == "9" || value == "8" || value == "7" ||
+            if (value == "9" || value == "8" || value == "7" ||
                 value == "6" || value == "5" || value == "4" ||
                 value == "3" || value == "2" || value == "1" || value == "0")
             {
-                _OperandTxt = _OperandTxt + value;
+                if (_OperandTxt == "0")
+                    _OperandTxt = "";
+
+                //_OperandTxt = _OperandTxt + value;
+                _OperandTxt += value;
                 txtResult.Text = _OperandTxt;
             }
             // Si el valor es operador
-            else if(value == "+" || value == "-" || value == "*"
+            else if (value == "+" || value == "-" || value == "*"
                 || value == "/")
             {
+                if (_Operator != "" && _OperandTxt != "")
+                    DoOperation();
 
+                _Operator = value;
+
+                if (_OperandTxt != "")
+                {
+                    _Operand = decimal.Parse(_OperandTxt);
+                    _OperandTxt = "";
+                }
             }
+            else if (value == "=")
+            {
+                if (_Operator != "" && _OperandTxt != "")
+                    DoOperation();
+            }
+            // Si el valor es delete
+            else if (value == "\b")
+                Delete();
+            else if (value == "\u001b")
+                Reset();
+            // Si el valor es decimal
+            else if (value == ",")
+            {
+                if(_OperandTxt.IndexOf(",") < 0)
+                {
+                    _OperandTxt += ",";
+                    txtResult.Text = _OperandTxt;
+                }
+            }
+        }
+
+        private void DoOperation()
+        {
+            decimal result = 0;
+
+            if (_Operator == "+")
+                result = _Operand + decimal.Parse(_OperandTxt);
+            else if(_Operator == "-")
+                result = _Operand - decimal.Parse(_OperandTxt);
+            else if( _Operator == "*")
+                result = _Operand * decimal.Parse(_OperandTxt);
+            else if(_Operator == "/")
+                result = _Operand / decimal.Parse(_OperandTxt);
+
+            _Operator = "";
+            _OperandTxt = result.ToString();
+            txtResult.Text = _OperandTxt;
         }
 
         private void btnText_Click(object sender, EventArgs e)
