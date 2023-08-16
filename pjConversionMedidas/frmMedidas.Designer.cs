@@ -92,32 +92,34 @@
             this.lstR.ItemHeight = 20;
             this.lstR.Location = new System.Drawing.Point(65, 289);
             this.lstR.Name = "lstR";
-            this.lstR.Size = new System.Drawing.Size(531, 104);
+            this.lstR.Size = new System.Drawing.Size(531, 184);
             this.lstR.TabIndex = 5;
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(65, 412);
+            this.btnLimpiar.Location = new System.Drawing.Point(65, 486);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(94, 29);
             this.btnLimpiar.TabIndex = 6;
             this.btnLimpiar.Text = "LIMPIAR";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(179, 412);
+            this.btnSalir.Location = new System.Drawing.Point(191, 486);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(94, 29);
             this.btnSalir.TabIndex = 7;
             this.btnSalir.Text = "SALIR";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // frmMedidas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(649, 461);
+            this.ClientSize = new System.Drawing.Size(649, 541);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.lstR);
