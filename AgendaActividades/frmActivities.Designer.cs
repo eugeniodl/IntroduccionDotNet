@@ -29,110 +29,118 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.txtAct = new System.Windows.Forms.TextBox();
+            this.lstAct = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(221, 12);
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.Image = global::AgendaActividades.Properties.Resources.OIP;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(337, 115);
+            this.pictureBox1.Size = new System.Drawing.Size(700, 86);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // btnAdd
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(354, 139);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.btnAdd.Location = new System.Drawing.Point(29, 121);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(146, 22);
+            this.btnAdd.TabIndex = 2;
+            this.btnAdd.Text = "AÑADIR ACTIVIDAD";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // button1
+            // btnSave
             // 
-            this.button1.Location = new System.Drawing.Point(35, 168);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSave.Location = new System.Drawing.Point(390, 121);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(82, 22);
+            this.btnSave.TabIndex = 3;
+            this.btnSave.Text = "GUARDAR";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // button2
+            // btnDelete
             // 
-            this.button2.Location = new System.Drawing.Point(448, 168);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 29);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDelete.Location = new System.Drawing.Point(490, 121);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(82, 22);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "ELIMINAR";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // button3
+            // btnCancel
             // 
-            this.button3.Location = new System.Drawing.Point(562, 168);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 29);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(675, 168);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(94, 29);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnCancel.Location = new System.Drawing.Point(589, 121);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(82, 22);
+            this.btnCancel.TabIndex = 5;
+            this.btnCancel.Text = "CANCELAR";
+            this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 209);
+            this.label2.Location = new System.Drawing.Point(29, 168);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 20);
+            this.label2.Size = new System.Drawing.Size(66, 15);
             this.label2.TabIndex = 6;
-            this.label2.Text = "label2";
+            this.label2.Text = "ACTIVIDAD";
             // 
-            // textBox1
+            // txtAct
             // 
-            this.textBox1.Location = new System.Drawing.Point(113, 206);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(656, 27);
-            this.textBox1.TabIndex = 7;
+            this.txtAct.Location = new System.Drawing.Point(117, 165);
+            this.txtAct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtAct.Name = "txtAct";
+            this.txtAct.Size = new System.Drawing.Size(554, 23);
+            this.txtAct.TabIndex = 7;
+            this.txtAct.TextChanged += new System.EventHandler(this.txtAct_TextChanged);
             // 
-            // listView1
+            // lstAct
             // 
-            this.listView1.Location = new System.Drawing.Point(35, 248);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(734, 199);
-            this.listView1.TabIndex = 8;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.lstAct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lstAct.FormattingEnabled = true;
+            this.lstAct.ItemHeight = 15;
+            this.lstAct.Location = new System.Drawing.Point(31, 214);
+            this.lstAct.Name = "lstAct";
+            this.lstAct.Size = new System.Drawing.Size(640, 199);
+            this.lstAct.TabIndex = 8;
             // 
             // frmActivities
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 482);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(700, 436);
+            this.Controls.Add(this.lstAct);
+            this.Controls.Add(this.txtAct);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmActivities";
-            this.Text = "frmActivities";
+            this.Text = "Agenda de actividades";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmActivities_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -142,13 +150,12 @@
         #endregion
 
         private PictureBox pictureBox1;
-        private Label label1;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button btnAdd;
+        private Button btnSave;
+        private Button btnDelete;
+        private Button btnCancel;
         private Label label2;
-        private TextBox textBox1;
-        private ListView listView1;
+        private TextBox txtAct;
+        private ListBox lstAct;
     }
 }
