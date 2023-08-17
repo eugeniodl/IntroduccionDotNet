@@ -68,6 +68,7 @@
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Añadir actividad";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnSave
             // 
@@ -77,6 +78,7 @@
             this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Guardar";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnDelete
             // 
@@ -86,6 +88,7 @@
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Eliminar";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnCancel
             // 
@@ -95,6 +98,7 @@
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancelar";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label2
             // 
@@ -111,6 +115,7 @@
             this.txtActivity.Name = "txtActivity";
             this.txtActivity.Size = new System.Drawing.Size(557, 27);
             this.txtActivity.TabIndex = 7;
+            this.txtActivity.TextChanged += new System.EventHandler(this.txtActivity_TextChanged);
             // 
             // lstActivities
             // 
@@ -120,6 +125,7 @@
             this.lstActivities.Name = "lstActivities";
             this.lstActivities.Size = new System.Drawing.Size(655, 204);
             this.lstActivities.TabIndex = 8;
+            this.lstActivities.SelectedIndexChanged += new System.EventHandler(this.lstActivities_SelectedIndexChanged);
             // 
             // frmActivities
             // 
@@ -137,6 +143,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmActivities";
             this.Text = "frmActivities";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmActivities_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
