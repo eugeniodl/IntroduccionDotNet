@@ -93,6 +93,7 @@
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "CANCELAR";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label2
             // 
@@ -123,6 +124,7 @@
             this.lstAct.Name = "lstAct";
             this.lstAct.Size = new System.Drawing.Size(640, 199);
             this.lstAct.TabIndex = 8;
+            this.lstAct.SelectedIndexChanged += new System.EventHandler(this.lstAct_SelectedIndexChanged);
             // 
             // frmActivities
             // 

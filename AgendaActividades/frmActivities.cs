@@ -136,5 +136,46 @@ namespace AgendaActividades
         {
             _HasChanges = true;
         }
+
+        private void lstAct_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadSelectedActivity();
+        }
+
+        private void LoadSelectedActivity()
+        {
+            if(lstAct.SelectedIndex >= 0 && 
+                lstAct.SelectedIndex < lstAct.Items.Count)
+            {
+                txtAct.Text = lstAct.Items[lstAct.SelectedIndex].ToString();
+
+                btnSave.Enabled = true;
+                txtAct.Enabled = true;
+                btnDelete.Enabled = true;
+                btnCancel.Enabled = true;
+
+                _IsNewAct = false;
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Cancel();
+        }
+
+        private void Cancel()
+        {
+            if(_HasChanges)
+            {
+                if(MessageBox.Show("¿Guardar cambios?","Guardar",
+                    MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    if (!SaveChanges())
+                        return;
+                }
+            }
+
+            Reset();
+        }
     }
 }
