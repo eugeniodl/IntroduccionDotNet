@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pjCalculadora", "pjCalculad
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pjConversionMedidas", "pjConversionMedidas\pjConversionMedidas.csproj", "{4D8B3F23-6086-4273-BB74-EC05568E41C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pjActivities", "pjActivities\pjActivities.csproj", "{718B7DAF-4670-42F3-B712-0BDF4229C40E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pjActivities", "pjActivities\pjActivities.csproj", "{718B7DAF-4670-42F3-B712-0BDF4229C40E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConvertidorNumerosEnLetras", "ConvertidorNumerosEnLetras\ConvertidorNumerosEnLetras.csproj", "{C2B39C9B-927E-4D79-B996-B3913B2808ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{718B7DAF-4670-42F3-B712-0BDF4229C40E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{718B7DAF-4670-42F3-B712-0BDF4229C40E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{718B7DAF-4670-42F3-B712-0BDF4229C40E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2B39C9B-927E-4D79-B996-B3913B2808ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2B39C9B-927E-4D79-B996-B3913B2808ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2B39C9B-927E-4D79-B996-B3913B2808ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2B39C9B-927E-4D79-B996-B3913B2808ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
